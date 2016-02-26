@@ -55,6 +55,7 @@ class DimaicTableViewController: UIViewController, UITableViewDataSource, UITabl
             cell.headerImage.sd_setImageWithURL(NSURL(string: links[indexPath.row].url)!, placeholderImage: UIImage(named: "loader")!)
             
             print(" \(cell.frame.height): largeCell")
+
 //            separator(cell)
             return cell
         }
@@ -75,7 +76,7 @@ class DimaicTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     private func separator(cell: UITableViewCell) {
         let separator = CALayer()
-        separator.backgroundColor = UIColor(named: "f6f6f6ff").CGColor
+        separator.backgroundColor = UIColor(named: "f6f6f6cc").CGColor
         separator.frame = CGRectMake(0, cell.frame.height - 5, cell.frame.width, 5)
         cell.layer.addSublayer(separator)
     }

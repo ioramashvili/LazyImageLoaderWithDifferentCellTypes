@@ -104,33 +104,43 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="holder" translatesAutoresizingMaskIntoConstraints="NO" id="o9e-i6-Phe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="161"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="o9e-i6-Phe" secondAttribute="height" multiplier="16:9" id="2xw-23-zjT"/>
                                                         <constraint firstAttribute="height" priority="999" constant="160" id="wxT-OX-amc"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="751" text="53 წუთის წინ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pg-ij-DCo">
-                                                    <rect key="frame" x="10" y="163" width="404" height="15"/>
+                                                    <rect key="frame" x="10" y="162" width="404" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="ამერიკული დოლარის ღირებულება გახდა 24 ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hih-Ks-u7n">
-                                                    <rect key="frame" x="10" y="180" width="394" height="54"/>
+                                                    <rect key="frame" x="10" y="179" width="394" height="54"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evX-n4-KZ8" userLabel="Separator">
+                                                    <rect key="frame" x="0.0" y="238" width="414" height="5"/>
+                                                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="5" id="tr4-k6-iLU"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="evX-n4-KZ8" secondAttribute="bottom" id="5cs-Ze-ff2"/>
                                                 <constraint firstItem="1Pg-ij-DCo" firstAttribute="leading" secondItem="ZcO-2T-5Nm" secondAttribute="leading" constant="10" id="9V2-uS-3Vu"/>
-                                                <constraint firstAttribute="bottom" secondItem="hih-Ks-u7n" secondAttribute="bottom" constant="7" id="HEL-wX-BaB"/>
+                                                <constraint firstAttribute="trailing" secondItem="evX-n4-KZ8" secondAttribute="trailing" id="BGb-vH-KKG"/>
+                                                <constraint firstAttribute="bottom" secondItem="hih-Ks-u7n" secondAttribute="bottom" constant="10" id="HEL-wX-BaB"/>
                                                 <constraint firstItem="hih-Ks-u7n" firstAttribute="top" secondItem="1Pg-ij-DCo" secondAttribute="bottom" constant="2" id="HgZ-5X-RKz"/>
                                                 <constraint firstItem="1Pg-ij-DCo" firstAttribute="top" secondItem="o9e-i6-Phe" secondAttribute="bottom" constant="2" id="L52-gL-SlJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="o9e-i6-Phe" secondAttribute="trailing" id="MtM-sL-We8"/>
                                                 <constraint firstItem="hih-Ks-u7n" firstAttribute="leading" secondItem="ZcO-2T-5Nm" secondAttribute="leading" constant="10" id="R0J-MY-tON"/>
                                                 <constraint firstItem="o9e-i6-Phe" firstAttribute="top" secondItem="ZcO-2T-5Nm" secondAttribute="top" id="jGa-6N-DWI"/>
+                                                <constraint firstItem="evX-n4-KZ8" firstAttribute="leading" secondItem="ZcO-2T-5Nm" secondAttribute="leading" id="kSE-KX-a30"/>
                                                 <constraint firstAttribute="trailing" secondItem="hih-Ks-u7n" secondAttribute="trailing" constant="10" id="w3r-R9-Kjj"/>
                                                 <constraint firstItem="o9e-i6-Phe" firstAttribute="leading" secondItem="ZcO-2T-5Nm" secondAttribute="leading" id="xsk-Gu-IHB"/>
                                                 <constraint firstAttribute="trailing" secondItem="1Pg-ij-DCo" secondAttribute="trailing" id="ylP-9R-BD1"/>
@@ -164,23 +174,33 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-Mx-38d">
-                                                    <rect key="frame" x="10" y="20" width="287" height="109"/>
+                                                    <rect key="frame" x="10" y="20" width="287" height="106"/>
                                                     <string key="text">ამერიკული დოლარის ღირებულება გახდა 24 ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiz-Zk-0N6" userLabel="Separator">
+                                                    <rect key="frame" x="0.0" y="131" width="414" height="5"/>
+                                                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="5" id="KmD-c0-M65"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="TDV-V1-s14" firstAttribute="width" secondItem="kTj-Ad-kCf" secondAttribute="width" multiplier="0.2666" priority="999" id="1jD-Gm-lHd"/>
                                                 <constraint firstAttribute="trailing" secondItem="TDV-V1-s14" secondAttribute="trailing" constant="5" id="4dH-sC-HdG"/>
                                                 <constraint firstItem="BB3-ng-8o2" firstAttribute="leading" secondItem="kTj-Ad-kCf" secondAttribute="leading" constant="10" id="4wh-Yj-436"/>
                                                 <constraint firstItem="uXG-Mx-38d" firstAttribute="top" secondItem="BB3-ng-8o2" secondAttribute="bottom" id="Dzj-qv-ajB"/>
+                                                <constraint firstAttribute="bottom" secondItem="uiz-Zk-0N6" secondAttribute="bottom" id="Ekc-Q4-zPR"/>
+                                                <constraint firstItem="uiz-Zk-0N6" firstAttribute="leading" secondItem="kTj-Ad-kCf" secondAttribute="leading" id="F2S-An-Qcf"/>
                                                 <constraint firstItem="TDV-V1-s14" firstAttribute="top" secondItem="BB3-ng-8o2" secondAttribute="top" id="OhZ-Lv-NJs"/>
                                                 <constraint firstItem="TDV-V1-s14" firstAttribute="leading" secondItem="uXG-Mx-38d" secondAttribute="trailing" constant="2" id="Uyo-K0-4f5"/>
+                                                <constraint firstAttribute="trailing" secondItem="uiz-Zk-0N6" secondAttribute="trailing" id="d6G-Me-bYt"/>
                                                 <constraint firstItem="uXG-Mx-38d" firstAttribute="leading" secondItem="kTj-Ad-kCf" secondAttribute="leading" constant="10" id="dRj-ml-aYb"/>
                                                 <constraint firstItem="BB3-ng-8o2" firstAttribute="top" secondItem="kTj-Ad-kCf" secondAttribute="top" constant="5" id="t1V-9y-Rue"/>
-                                                <constraint firstAttribute="bottom" secondItem="uXG-Mx-38d" secondAttribute="bottom" constant="7" id="zGh-aq-QLt"/>
+                                                <constraint firstAttribute="bottom" secondItem="uXG-Mx-38d" secondAttribute="bottom" constant="10" id="zGh-aq-QLt"/>
                                                 <constraint firstItem="TDV-V1-s14" firstAttribute="leading" secondItem="BB3-ng-8o2" secondAttribute="trailing" constant="5" id="zzC-Bx-wDL"/>
                                             </constraints>
                                         </tableViewCellContentView>
