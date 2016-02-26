@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6lM-Lg-YLt">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LazyImageLoading" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dyg-12-RBk">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="fu6-xA-m4V" customClass="CustomCell" customModule="LazyImageLoading" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fu6-xA-m4V" id="pss-eP-diO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loader" translatesAutoresizingMaskIntoConstraints="NO" id="tu6-SW-TF2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="ეს არის მრავალხაზიანი ტექსტი რომელიც ჩანს ეკრანზე" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REe-L1-Rum">
+                                                    <rect key="frame" x="10" y="79" width="300" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="REe-L1-Rum" secondAttribute="trailing" constant="10" id="2Bm-0j-DPe"/>
+                                                <constraint firstItem="REe-L1-Rum" firstAttribute="leading" secondItem="pss-eP-diO" secondAttribute="leading" constant="10" id="3hq-EN-pFB"/>
+                                                <constraint firstItem="tu6-SW-TF2" firstAttribute="leading" secondItem="pss-eP-diO" secondAttribute="leading" id="6H2-U7-eYp"/>
+                                                <constraint firstAttribute="bottom" secondItem="REe-L1-Rum" secondAttribute="bottom" constant="5" id="H1d-aG-IId"/>
+                                                <constraint firstItem="tu6-SW-TF2" firstAttribute="top" secondItem="pss-eP-diO" secondAttribute="top" id="Vom-eg-Sbe"/>
+                                                <constraint firstAttribute="trailing" secondItem="tu6-SW-TF2" secondAttribute="trailing" id="aNi-YG-iqU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="tu6-SW-TF2" secondAttribute="bottom" id="xaf-hh-qaI"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="customImageView" destination="tu6-SW-TF2" id="fIz-LM-Y6e"/>
+                                            <outlet property="customLabel" destination="REe-L1-Rum" id="vMh-rI-VUc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pIV-6f-WKL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8CL-UA-fh5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dyg-12-RBk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CgG-Wa-O2f"/>
+                            <constraint firstAttribute="trailing" secondItem="Dyg-12-RBk" secondAttribute="trailing" id="GvW-lz-CnV"/>
+                            <constraint firstItem="Dyg-12-RBk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Sn4-gn-abB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dyg-12-RBk" secondAttribute="bottom" id="vs2-By-65c"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157" y="259"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="XuV-qa-U9q">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="S13-v8-nYB" customClass="DimaicTableViewController" customModule="LazyImageLoading" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SZQ-cb-1Nh"/>
+                        <viewControllerLayoutGuide type="bottom" id="KmX-6u-KfN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V1T-sO-gc4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="223" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AeT-LP-Aa4">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="largeCell" id="cn0-Sz-iOA" customClass="LargeTableViewCell" customModule="LazyImageLoading" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="223"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cn0-Sz-iOA" id="ZcO-2T-5Nm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="223"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="holder" translatesAutoresizingMaskIntoConstraints="NO" id="o9e-i6-Phe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="161"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="o9e-i6-Phe" secondAttribute="height" multiplier="16:9" id="2xw-23-zjT"/>
+                                                        <constraint firstAttribute="height" priority="999" constant="160" id="wxT-OX-amc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="751" text="53 წუთის წინ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pg-ij-DCo">
+                                                    <rect key="frame" x="10" y="163" width="404" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="ამერიკული დოლარის ღირებულება გახდა 24 ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hih-Ks-u7n">
+                                                    <rect key="frame" x="10" y="180" width="394" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1Pg-ij-DCo" firstAttribute="leading" secondItem="ZcO-2T-5Nm" secondAttribute="leading" constant="10" id="9V2-uS-3Vu"/>
+                                                <constraint firstAttribute="bottom" secondItem="hih-Ks-u7n" secondAttribute="bottom" constant="7" id="HEL-wX-BaB"/>
+                                                <constraint firstItem="hih-Ks-u7n" firstAttribute="top" secondItem="1Pg-ij-DCo" secondAttribute="bottom" constant="2" id="HgZ-5X-RKz"/>
+                                                <constraint firstItem="1Pg-ij-DCo" firstAttribute="top" secondItem="o9e-i6-Phe" secondAttribute="bottom" constant="2" id="L52-gL-SlJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="o9e-i6-Phe" secondAttribute="trailing" id="MtM-sL-We8"/>
+                                                <constraint firstItem="hih-Ks-u7n" firstAttribute="leading" secondItem="ZcO-2T-5Nm" secondAttribute="leading" constant="10" id="R0J-MY-tON"/>
+                                                <constraint firstItem="o9e-i6-Phe" firstAttribute="top" secondItem="ZcO-2T-5Nm" secondAttribute="top" id="jGa-6N-DWI"/>
+                                                <constraint firstAttribute="trailing" secondItem="hih-Ks-u7n" secondAttribute="trailing" constant="10" id="w3r-R9-Kjj"/>
+                                                <constraint firstItem="o9e-i6-Phe" firstAttribute="leading" secondItem="ZcO-2T-5Nm" secondAttribute="leading" id="xsk-Gu-IHB"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Pg-ij-DCo" secondAttribute="trailing" id="ylP-9R-BD1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="headerImage" destination="o9e-i6-Phe" id="eET-k7-0iq"/>
+                                            <outlet property="headerLabel" destination="hih-Ks-u7n" id="KrS-Mq-Oj2"/>
+                                            <outlet property="headerTimeLabel" destination="1Pg-ij-DCo" id="OHG-2P-E4O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="smallCell" rowHeight="136" id="5ph-G7-bIT" customClass="SmallTableViewCell" customModule="LazyImageLoading" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="251" width="414" height="136"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ph-G7-bIT" id="kTj-Ad-kCf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="holder" translatesAutoresizingMaskIntoConstraints="NO" id="TDV-V1-s14">
+                                                    <rect key="frame" x="299" y="5" width="110" height="83"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="TDV-V1-s14" secondAttribute="height" multiplier="4:3" id="QGJ-wS-Q4E"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="751" text="53 წუთის წინ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB3-ng-8o2">
+                                                    <rect key="frame" x="10" y="5" width="284" height="15"/>
+                                                    <color key="backgroundColor" red="1" green="0.2209252062" blue="0.38933617390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-Mx-38d">
+                                                    <rect key="frame" x="10" y="20" width="287" height="109"/>
+                                                    <string key="text">ამერიკული დოლარის ღირებულება გახდა 24 ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TDV-V1-s14" firstAttribute="width" secondItem="kTj-Ad-kCf" secondAttribute="width" multiplier="0.2666" priority="999" id="1jD-Gm-lHd"/>
+                                                <constraint firstAttribute="trailing" secondItem="TDV-V1-s14" secondAttribute="trailing" constant="5" id="4dH-sC-HdG"/>
+                                                <constraint firstItem="BB3-ng-8o2" firstAttribute="leading" secondItem="kTj-Ad-kCf" secondAttribute="leading" constant="10" id="4wh-Yj-436"/>
+                                                <constraint firstItem="uXG-Mx-38d" firstAttribute="top" secondItem="BB3-ng-8o2" secondAttribute="bottom" id="Dzj-qv-ajB"/>
+                                                <constraint firstItem="TDV-V1-s14" firstAttribute="top" secondItem="BB3-ng-8o2" secondAttribute="top" id="OhZ-Lv-NJs"/>
+                                                <constraint firstItem="TDV-V1-s14" firstAttribute="leading" secondItem="uXG-Mx-38d" secondAttribute="trailing" constant="2" id="Uyo-K0-4f5"/>
+                                                <constraint firstItem="uXG-Mx-38d" firstAttribute="leading" secondItem="kTj-Ad-kCf" secondAttribute="leading" constant="10" id="dRj-ml-aYb"/>
+                                                <constraint firstItem="BB3-ng-8o2" firstAttribute="top" secondItem="kTj-Ad-kCf" secondAttribute="top" constant="5" id="t1V-9y-Rue"/>
+                                                <constraint firstAttribute="bottom" secondItem="uXG-Mx-38d" secondAttribute="bottom" constant="7" id="zGh-aq-QLt"/>
+                                                <constraint firstItem="TDV-V1-s14" firstAttribute="leading" secondItem="BB3-ng-8o2" secondAttribute="trailing" constant="5" id="zzC-Bx-wDL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headerImage" destination="TDV-V1-s14" id="ssj-Gj-U2N"/>
+                                            <outlet property="headerLabel" destination="uXG-Mx-38d" id="DS3-k2-qSC"/>
+                                            <outlet property="headerTimeLabel" destination="BB3-ng-8o2" id="mQv-9u-EP2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="S13-v8-nYB" id="7jn-hi-7Kb"/>
+                                    <outlet property="delegate" destination="S13-v8-nYB" id="SJA-C1-z76"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AeT-LP-Aa4" firstAttribute="top" secondItem="SZQ-cb-1Nh" secondAttribute="bottom" id="2tW-Ac-xRv"/>
+                            <constraint firstItem="KmX-6u-KfN" firstAttribute="top" secondItem="AeT-LP-Aa4" secondAttribute="bottom" id="Bzu-KL-486"/>
+                            <constraint firstItem="AeT-LP-Aa4" firstAttribute="leading" secondItem="V1T-sO-gc4" secondAttribute="leading" id="m2Y-Zr-Ia9"/>
+                            <constraint firstAttribute="trailing" secondItem="AeT-LP-Aa4" secondAttribute="trailing" id="wPx-En-aOE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Feed" id="QEh-3E-zqh"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="tableView" destination="AeT-LP-Aa4" id="toi-c7-lvS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hB7-nC-p7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="396"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zdb-QU-s3F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6lM-Lg-YLt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vS0-eZ-XSw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S13-v8-nYB" kind="relationship" relationship="rootViewController" id="dbo-yM-VPq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRM-aV-QAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="361"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="holder" width="1200" height="799"/>
+        <image name="loader" width="530" height="239"/>
+    </resources>
+</document>
