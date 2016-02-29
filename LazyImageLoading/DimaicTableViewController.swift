@@ -45,6 +45,12 @@ class DimaicTableViewController: UIViewController, UITableViewDataSource, UITabl
         links.append(Model(url: "http://www.cosmicbooknews.com/sites/default/files/Screenshot_15_4.jpg", type: Int(arc4random_uniform(2))))
     }
     
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let width = tableView.frame.width
+        let estimatedheight = links[indexPath.row].type == 0 ? (width * 0.5625 + 40) : (width * 0.2666 + 10)
+        print(estimatedheight)
+        return estimatedheight
+    }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -100,9 +106,6 @@ class DimaicTableViewController: UIViewController, UITableViewDataSource, UITabl
             links.append(item)
         }
         let pathes = (1...20).map { NSIndexPath(forRow: links.count - $0, inSection: 0) }
-        
-//        links.append(Model(url: "https://brobible.files.wordpress.com/2015/12/superman221.png?w=640", type: Int(arc4random_uniform(2))))
-//        let path = NSIndexPath(forRow: links.count - 1, inSection: 0)
         tableView.insertRowsAtIndexPaths(pathes, withRowAnimation: UITableViewRowAnimation.None)
         tableView.endUpdates()
     }
@@ -110,5 +113,4 @@ class DimaicTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBAction func refreshTable(sender: UIBarButtonItem) {
         tableView.reloadData()
     }
-    
 }
