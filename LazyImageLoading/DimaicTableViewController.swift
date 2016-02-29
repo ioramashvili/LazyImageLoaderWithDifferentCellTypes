@@ -9,7 +9,9 @@ class DimaicTableViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 178.0
+        tableView.estimatedRowHeight = 315.0
+//        tableView.estimatedRowHeight = 178.0
+        
         
         links.append(Model(url: "http://i.newsarama.com/images/i/000/160/153/original/batman-v-superman.jpg?1449271783", type: Int(arc4random_uniform(2))))
         
@@ -35,6 +37,12 @@ class DimaicTableViewController: UIViewController, UITableViewDataSource, UITabl
         links.append(Model(url: "https://i.ytimg.com/vi/Cle_rKBpZ28/maxresdefault.jpg", type: Int(arc4random_uniform(2))))
         links.append(Model(url: "http://media.comicbook.com/uploads1/2015/07/bvs-dark-knight-returns-143737.jpg", type: Int(arc4random_uniform(2))))
         links.append(Model(url: "https://brobible.files.wordpress.com/2015/12/superman221.png?w=640", type: Int(arc4random_uniform(2))))
+        
+        links.append(Model(url: "http://i.newsarama.com/images/i/000/165/565/i02/BvS_Doritos.jpg?1456527263", type: Int(arc4random_uniform(2))))
+        links.append(Model(url: "http://static.srcdn.com/slir/w786-h393-q90-c786:393/wp-content/uploads/Batman-V-Superman-Guards.jpg", type: Int(arc4random_uniform(2))))
+        links.append(Model(url: "http://cdn.movieweb.com/img.news.tops/NEmMvubkR450pn_2_b.jpg", type: Int(arc4random_uniform(2))))
+        links.append(Model(url: "http://www.thereelword.net/wp-content/uploads/2015/12/batman-v-superman-clip-screenshot.png", type: Int(arc4random_uniform(2))))
+        links.append(Model(url: "http://www.cosmicbooknews.com/sites/default/files/Screenshot_15_4.jpg", type: Int(arc4random_uniform(2))))
     }
     
 
@@ -80,5 +88,27 @@ class DimaicTableViewController: UIViewController, UITableViewDataSource, UITabl
         separator.frame = CGRectMake(0, cell.frame.height - 5, cell.frame.width, 5)
         cell.layer.addSublayer(separator)
     }
-
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    @IBAction func add(sender: UIBarButtonItem) {
+        tableView.beginUpdates()
+        let loaded = (1...20).map { _ in Model(url: "https://brobible.files.wordpress.com/2015/12/superman221.png?w=640", type: Int(arc4random_uniform(2))) }
+        for item in loaded {
+            links.append(item)
+        }
+        let pathes = (1...20).map { NSIndexPath(forRow: links.count - $0, inSection: 0) }
+        
+//        links.append(Model(url: "https://brobible.files.wordpress.com/2015/12/superman221.png?w=640", type: Int(arc4random_uniform(2))))
+//        let path = NSIndexPath(forRow: links.count - 1, inSection: 0)
+        tableView.insertRowsAtIndexPaths(pathes, withRowAnimation: UITableViewRowAnimation.None)
+        tableView.endUpdates()
+    }
+    
+    @IBAction func refreshTable(sender: UIBarButtonItem) {
+        tableView.reloadData()
+    }
+    
 }

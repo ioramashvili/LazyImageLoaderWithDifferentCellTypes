@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -99,12 +100,13 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="largeCell" id="cn0-Sz-iOA" customClass="LargeTableViewCell" customModule="LazyImageLoading" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="223"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cn0-Sz-iOA" id="ZcO-2T-5Nm">
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cn0-Sz-iOA" id="ZcO-2T-5Nm">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="223"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="holder" translatesAutoresizingMaskIntoConstraints="NO" id="o9e-i6-Phe">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="o9e-i6-Phe" secondAttribute="height" multiplier="16:9" id="2xw-23-zjT"/>
                                                         <constraint firstAttribute="height" priority="999" constant="160" id="wxT-OX-amc"/>
@@ -112,15 +114,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="751" text="53 წუთის წინ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pg-ij-DCo">
                                                     <rect key="frame" x="10" y="162" width="404" height="15"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="ამერიკული დოლარის ღირებულება გახდა 24 ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hih-Ks-u7n">
                                                     <rect key="frame" x="10" y="179" width="394" height="54"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evX-n4-KZ8" userLabel="Separator">
                                                     <rect key="frame" x="0.0" y="238" width="414" height="5"/>
@@ -156,29 +162,24 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="smallCell" rowHeight="136" id="5ph-G7-bIT" customClass="SmallTableViewCell" customModule="LazyImageLoading" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="251" width="414" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ph-G7-bIT" id="kTj-Ad-kCf">
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ph-G7-bIT" id="kTj-Ad-kCf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="holder" translatesAutoresizingMaskIntoConstraints="NO" id="TDV-V1-s14">
                                                     <rect key="frame" x="299" y="5" width="110" height="83"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="TDV-V1-s14" secondAttribute="height" multiplier="4:3" id="QGJ-wS-Q4E"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="751" text="53 წუთის წინ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB3-ng-8o2">
                                                     <rect key="frame" x="10" y="5" width="284" height="15"/>
-                                                    <color key="backgroundColor" red="1" green="0.2209252062" blue="0.38933617390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-Mx-38d">
-                                                    <rect key="frame" x="10" y="20" width="287" height="106"/>
-                                                    <string key="text">ამერიკული დოლარის ღირებულება გახდა 24 ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiz-Zk-0N6" userLabel="Separator">
                                                     <rect key="frame" x="0.0" y="131" width="414" height="5"/>
@@ -187,6 +188,15 @@
                                                         <constraint firstAttribute="height" constant="5" id="KmD-c0-M65"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-Mx-38d">
+                                                    <rect key="frame" x="10" y="20" width="287" height="106"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">ამერიკული დოლარის ღირებულება გახდა 24 ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="TDV-V1-s14" firstAttribute="width" secondItem="kTj-Ad-kCf" secondAttribute="width" multiplier="0.2666" priority="999" id="1jD-Gm-lHd"/>
@@ -225,7 +235,20 @@
                             <constraint firstAttribute="trailing" secondItem="AeT-LP-Aa4" secondAttribute="trailing" id="wPx-En-aOE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Feed" id="QEh-3E-zqh"/>
+                    <navigationItem key="navigationItem" title="Feed" id="QEh-3E-zqh">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="plt-gr-n8C">
+                                <connections>
+                                    <action selector="add:" destination="S13-v8-nYB" id="bYB-ce-elb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="oWY-Ea-nha">
+                                <connections>
+                                    <action selector="refreshTable:" destination="S13-v8-nYB" id="gL5-B2-Ydj"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="tableView" destination="AeT-LP-Aa4" id="toi-c7-lvS"/>
@@ -233,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hB7-nC-p7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1118" y="396"/>
+            <point key="canvasLocation" x="1101" y="387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zdb-QU-s3F">
