@@ -193,8 +193,6 @@ class Scroll2ViewController: UIViewController , UITextViewDelegate, UIScrollView
             print("negative differentScale ", differentScale)
             scalableView.layer.opacity = Float(offset / scrollView.contentInset.top)
             scalableView.layer.position.y = scalableView.frame.height / 2 + self.navigationBar.frame.height + diff / 2
-//            scalableView.frame.origin.y = diff / 2 + self.navigationBar.frame.height
-//            scalableView.frame.size.height = cachedSize.height - diff
         }
     }
 }
