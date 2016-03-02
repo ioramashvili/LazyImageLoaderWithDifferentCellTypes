@@ -12,6 +12,7 @@
 		4309960D1C80447D0013E482 /* SmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309960C1C80447D0013E482 /* SmallTableViewCell.swift */; };
 		4309960F1C8044AD0013E482 /* DimaicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309960E1C8044AD0013E482 /* DimaicTableViewController.swift */; };
 		430996111C8053970013E482 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430996101C8053970013E482 /* Model.swift */; };
+		434BB2761C8701320000730D /* Scroll2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434BB2751C8701320000730D /* Scroll2ViewController.swift */; };
 		434EEF371C8566ED00959D87 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EEF361C8566ED00959D87 /* WebViewController.swift */; };
 		434EEF3B1C85774100959D87 /* ScrollImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EEF3A1C85774100959D87 /* ScrollImageViewController.swift */; };
 		436301F11C7F23F4002B19FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436301F01C7F23F4002B19FA /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		4309960C1C80447D0013E482 /* SmallTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallTableViewCell.swift; sourceTree = "<group>"; };
 		4309960E1C8044AD0013E482 /* DimaicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimaicTableViewController.swift; sourceTree = "<group>"; };
 		430996101C8053970013E482 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		434BB2751C8701320000730D /* Scroll2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scroll2ViewController.swift; sourceTree = "<group>"; };
 		434EEF361C8566ED00959D87 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		434EEF3A1C85774100959D87 /* ScrollImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollImageViewController.swift; sourceTree = "<group>"; };
 		436301ED1C7F23F4002B19FA /* LazyImageLoading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyImageLoading.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,15 @@
 			name = DinamycCells;
 			sourceTree = "<group>";
 		};
+		434BB2741C8700AE0000730D /* ArticleControllers */ = {
+			isa = PBXGroup;
+			children = (
+				434EEF3A1C85774100959D87 /* ScrollImageViewController.swift */,
+				434BB2751C8701320000730D /* Scroll2ViewController.swift */,
+			);
+			name = ArticleControllers;
+			sourceTree = "<group>";
+		};
 		436301E41C7F23F4002B19FA = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +164,7 @@
 		436301EF1C7F23F4002B19FA /* LazyImageLoading */ = {
 			isa = PBXGroup;
 			children = (
+				434BB2741C8700AE0000730D /* ArticleControllers */,
 				430996091C8044130013E482 /* DinamycCells */,
 				436301F01C7F23F4002B19FA /* AppDelegate.swift */,
 				436301F21C7F23F4002B19FA /* ViewController.swift */,
@@ -163,7 +175,6 @@
 				436302201C7F24E1002B19FA /* LazyImageLoading-Bridging-Header.h */,
 				436302231C7F25CF002B19FA /* CustomCell.swift */,
 				434EEF361C8566ED00959D87 /* WebViewController.swift */,
-				434EEF3A1C85774100959D87 /* ScrollImageViewController.swift */,
 			);
 			path = LazyImageLoading;
 			sourceTree = "<group>";
@@ -374,6 +385,7 @@
 				4308AF221C848A9D007484EF /* WebViewTableViewCell.swift in Sources */,
 				436301F31C7F23F4002B19FA /* ViewController.swift in Sources */,
 				430996111C8053970013E482 /* Model.swift in Sources */,
+				434BB2761C8701320000730D /* Scroll2ViewController.swift in Sources */,
 				434EEF3B1C85774100959D87 /* ScrollImageViewController.swift in Sources */,
 				4309960B1C80444B0013E482 /* LargeTableViewCell.swift in Sources */,
 				436302241C7F25CF002B19FA /* CustomCell.swift in Sources */,

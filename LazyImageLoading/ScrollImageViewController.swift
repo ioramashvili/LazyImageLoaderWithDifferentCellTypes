@@ -4,28 +4,37 @@ class ScrollImageViewController: UIViewController, UITextViewDelegate, UIScrollV
     
     @IBOutlet weak var articleText: UITextView!
     @IBOutlet weak var scalableView: UIImageView!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         articleText.backgroundColor = UIColor.whiteColor()
         print("scalableView bounds ", scalableView.bounds)
+        
+        let emptyImage = UIImage()
+        navigationBar.shadowImage = emptyImage
+        navigationBar.setBackgroundImage(emptyImage, forBarMetrics: UIBarMetrics.Default)
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
-    }
+//    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+//        return UIStatusBarStyle.LightContent
+//    }
     
     override func viewDidAppear(animated: Bool) {
-        UIView.animateWithDuration(1.2, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+        UIView.animateWithDuration(1.2, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.9, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
             
             self.articleText.contentInset.top = self.scalableView.bounds.height
-            self.articleText.contentOffset.y = -self.scalableView.bounds.height
+            self.articleText.contentOffset.y = -self.articleText.contentInset.top - self.navigationBar.frame.height
+
             self.articleText.backgroundColor = UIColor.clearColor()
             
             
             }) { (bool: Bool) -> Void in
                        self.articleText.delegate = self
-                print("now article text is delegate")
+                self.articleText.contentOffset.y = -self.articleText.contentInset.top
+                print(self.articleText.contentInset.top)
+                print(self.articleText.contentOffset.y)
         }
         
         
@@ -56,7 +65,7 @@ class ScrollImageViewController: UIViewController, UITextViewDelegate, UIScrollV
 //            print(scalableView.frame, frame.width / 2, frame.height / 2)
 //            print(scalableView.layer.position)
             
-            scalableView.layer.position.y = frame.height / 2
+            scalableView.layer.position.y = frame.height / 2 + self.navigationBar.frame.height
         }
         else {
             scalableView.layer.opacity = Float(offset / scrollView.contentInset.top)
