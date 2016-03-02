@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6lM-Lg-YLt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AJD-lZ-oMk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
@@ -105,10 +106,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="holder" translatesAutoresizingMaskIntoConstraints="NO" id="o9e-i6-Phe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="284" height="160"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="o9e-i6-Phe" secondAttribute="height" multiplier="16:9" id="2xw-23-zjT"/>
+                                                        <constraint firstAttribute="height" secondItem="o9e-i6-Phe" secondAttribute="width" multiplier="9:16" id="2xw-23-zjT"/>
                                                         <constraint firstAttribute="height" priority="999" constant="160" id="wxT-OX-amc"/>
                                                     </constraints>
                                                 </imageView>
@@ -116,22 +117,23 @@
                                                     <rect key="frame" x="10" y="162" width="404" height="15"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evX-n4-KZ8" userLabel="Separator">
-                                                    <rect key="frame" x="0.0" y="238" width="414" height="5"/>
+                                                    <rect key="frame" x="0.0" y="256" width="414" height="5"/>
                                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="5" id="tr4-k6-iLU"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="ამერიკული დოლარის ღირებულება გახდა 24 ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hih-Ks-u7n">
-                                                    <rect key="frame" x="10" y="179" width="394" height="54"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hih-Ks-u7n">
+                                                    <rect key="frame" x="10" y="179" width="394" height="72"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">პრეზიდენტის ადმინისტრაციის უფროსი გიორგი აბაშიშვილი მიიჩნევს, რომ პარლამენტმა ეროვნული ბანკის საბჭოს წევრი რაც შეიძლება სწრაფად უნდა დაამტკიცოს.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
@@ -177,7 +179,7 @@
                                                     <rect key="frame" x="10" y="5" width="284" height="15"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
@@ -188,18 +190,19 @@
                                                         <constraint firstAttribute="height" constant="5" id="KmD-c0-M65"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-Mx-38d">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="899" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-Mx-38d">
                                                     <rect key="frame" x="10" y="20" width="287" height="106"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <string key="text">ამერიკული დოლარის ღირებულება გახდა 24 ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით ლარი და აწი თვენი საქმის თვენ იცით 24 ლარი და აწი თვენი საქმის თვენ იცით</string>
+                                                    <string key="text">სამხრეთ კავკასიის რეგიონის სტაბილურობა სამხრეთ კავკასიის რეგიონის სტაბილურობა სამხრეთ კავკასიის რეგიონის სტაბილურობა  რეგიონის სტაბილურობა</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="TDV-V1-s14" firstAttribute="width" secondItem="kTj-Ad-kCf" secondAttribute="width" multiplier="0.2666" priority="999" id="1jD-Gm-lHd"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="TDV-V1-s14" secondAttribute="bottom" priority="900" constant="5" id="4YG-Kd-ijc"/>
                                                 <constraint firstAttribute="trailing" secondItem="TDV-V1-s14" secondAttribute="trailing" constant="5" id="4dH-sC-HdG"/>
                                                 <constraint firstItem="BB3-ng-8o2" firstAttribute="leading" secondItem="kTj-Ad-kCf" secondAttribute="leading" constant="10" id="4wh-Yj-436"/>
                                                 <constraint firstItem="uXG-Mx-38d" firstAttribute="top" secondItem="BB3-ng-8o2" secondAttribute="bottom" id="Dzj-qv-ajB"/>
@@ -210,7 +213,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="uiz-Zk-0N6" secondAttribute="trailing" id="d6G-Me-bYt"/>
                                                 <constraint firstItem="uXG-Mx-38d" firstAttribute="leading" secondItem="kTj-Ad-kCf" secondAttribute="leading" constant="10" id="dRj-ml-aYb"/>
                                                 <constraint firstItem="BB3-ng-8o2" firstAttribute="top" secondItem="kTj-Ad-kCf" secondAttribute="top" constant="5" id="t1V-9y-Rue"/>
-                                                <constraint firstAttribute="bottom" secondItem="uXG-Mx-38d" secondAttribute="bottom" constant="10" id="zGh-aq-QLt"/>
+                                                <constraint firstAttribute="bottom" secondItem="uXG-Mx-38d" secondAttribute="bottom" priority="999" constant="10" id="zGh-aq-QLt"/>
                                                 <constraint firstItem="TDV-V1-s14" firstAttribute="leading" secondItem="BB3-ng-8o2" secondAttribute="trailing" constant="5" id="zzC-Bx-wDL"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -218,6 +221,33 @@
                                             <outlet property="headerImage" destination="TDV-V1-s14" id="ssj-Gj-U2N"/>
                                             <outlet property="headerLabel" destination="uXG-Mx-38d" id="DS3-k2-qSC"/>
                                             <outlet property="headerTimeLabel" destination="BB3-ng-8o2" id="mQv-9u-EP2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="webCell" rowHeight="100" id="nYg-s4-mYF" customClass="WebViewTableViewCell" customModule="LazyImageLoading" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="360" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nYg-s4-mYF" id="IUV-PF-bmc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v89-mn-cF0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="BDT-fS-8C0"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="v89-mn-cF0" firstAttribute="leading" secondItem="IUV-PF-bmc" secondAttribute="leading" id="Bhx-V1-QcG"/>
+                                                <constraint firstAttribute="bottom" secondItem="v89-mn-cF0" secondAttribute="bottom" id="M6o-pi-dWc"/>
+                                                <constraint firstAttribute="trailing" secondItem="v89-mn-cF0" secondAttribute="trailing" id="YDP-aj-sCI"/>
+                                                <constraint firstItem="v89-mn-cF0" firstAttribute="top" secondItem="IUV-PF-bmc" secondAttribute="top" id="dCI-lk-yfN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="webView" destination="v89-mn-cF0" id="HFM-YG-LKz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -236,6 +266,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="QEh-3E-zqh">
+                        <barButtonItem key="leftBarButtonItem" title="Top Article" id="bCt-NZ-saL">
+                            <connections>
+                                <action selector="scrollToTop:" destination="S13-v8-nYB" id="fh2-Qc-lgl"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="plt-gr-n8C">
                                 <connections>
@@ -258,6 +293,73 @@
             </objects>
             <point key="canvasLocation" x="1101" y="387"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Mto-q7-r0e">
+            <objects>
+                <viewController id="Aod-UI-M35" customClass="WebViewController" customModule="LazyImageLoading" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jq7-Ld-Vsv"/>
+                        <viewControllerLayoutGuide type="bottom" id="a2s-g4-LpF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zaq-b9-EHf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBc-2n-ORY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="309"/>
+        </scene>
+        <!--Scroll Image View Controller-->
+        <scene sceneID="dRB-3P-lHQ">
+            <objects>
+                <viewController id="AJD-lZ-oMk" customClass="ScrollImageViewController" customModule="LazyImageLoading" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="92Q-Gc-qVI"/>
+                        <viewControllerLayoutGuide type="bottom" id="aRH-4Q-0SW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ub5-Wi-aje">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="nature" translatesAutoresizingMaskIntoConstraints="NO" id="zPP-3s-D7R">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zPP-3s-D7R" secondAttribute="height" multiplier="16:9" id="gpG-WB-3VF"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k9l-1S-tFB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zPP-3s-D7R" firstAttribute="top" secondItem="92Q-Gc-qVI" secondAttribute="bottom" constant="-20" id="6zA-sR-8kn"/>
+                            <constraint firstItem="k9l-1S-tFB" firstAttribute="top" secondItem="92Q-Gc-qVI" secondAttribute="bottom" constant="-20" id="K86-IO-ZDz"/>
+                            <constraint firstItem="k9l-1S-tFB" firstAttribute="leading" secondItem="ub5-Wi-aje" secondAttribute="leading" id="Sbu-a3-WjC"/>
+                            <constraint firstAttribute="trailing" secondItem="zPP-3s-D7R" secondAttribute="trailing" id="TJo-Vo-JrI"/>
+                            <constraint firstAttribute="trailing" secondItem="k9l-1S-tFB" secondAttribute="trailing" id="WRB-1n-DkO"/>
+                            <constraint firstItem="aRH-4Q-0SW" firstAttribute="top" secondItem="k9l-1S-tFB" secondAttribute="bottom" id="kMJ-w0-AgL"/>
+                            <constraint firstItem="zPP-3s-D7R" firstAttribute="leading" secondItem="ub5-Wi-aje" secondAttribute="leading" id="nUJ-Pg-1Wm"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="articleText" destination="k9l-1S-tFB" id="G6p-C8-vf7"/>
+                        <outlet property="scalableView" destination="zPP-3s-D7R" id="mqx-g0-rid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RnQ-H8-b7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="314"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="zdb-QU-s3F">
             <objects>
@@ -275,11 +377,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRM-aV-QAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="361"/>
+            <point key="canvasLocation" x="684" y="406"/>
         </scene>
     </scenes>
     <resources>
         <image name="holder" width="1200" height="799"/>
         <image name="loader" width="530" height="239"/>
+        <image name="nature" width="640" height="360"/>
     </resources>
 </document>
